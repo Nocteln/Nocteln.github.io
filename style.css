@@ -1,0 +1,94 @@
+body
+{
+    background-color: yellowgreen;
+
+}
+h1
+{
+    text-align: center;
+    border: 3px blue solid;
+    box-shadow: 7px 7px 7px black;
+    border-radius: 25px 25px ;
+    margin: 58px;
+    background-color: orange;
+}
+
+.pp 
+{
+    width: 250px;
+    height: 200px;
+    border: 3px solid rgba(150, 151, 54, 0.658);
+    background-color: rgba(244, 247, 68, 0.658); 
+    margin: auto;
+    padding: 20px 10px;
+    border-radius: 25px 25px ;
+
+}
+
+img 
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px 25px;
+}
+
+.cec
+{
+    width: 75%;
+    height: 75%;
+    border: 5px solid greenyellow;
+    border-radius: 25px 25px;
+}
+
+.paragraphe
+{
+    border: 3px solid blue;
+    box-shadow: 7px 7px 7px black;
+    border-radius: 25px 25px ;
+    margin: 58px;
+    background-color: tomato;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   align-items: center;
+}
+
+.paragraphe2
+{
+    border: 3px solid blue;
+    box-shadow: 7px 7px 7px black;
+    border-radius: 25px 25px ;
+    margin: 58px;
+    background-color: tomato;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.menu
+{
+    float: left;
+    border: 3px solid rgb(32, 32, 240);
+    border-radius: 25px 25px;
+    background-color: tomato;
+    text-align: center;
+}
+
+a:hover
+{
+    text-decoration: dashed;
+}
+
+.HTML-CSS
+{
+    border: 3px solid red;
+    border-radius: 25px 25px;
+    background-color: blue;
+    margin: 25px;
+}
+
+.haut {
+    height: 50px;
+    width: 50px;
+}

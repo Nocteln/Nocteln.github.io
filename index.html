@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <title>mon cv</title>
+    </head>
+    <body>
+        <h1 id="haut">Mon cv</h1>
+  
+          <div class="pp">
+          <img src="pp1.png" alt="photo de profil">
+          </div>
+          <div class="menu">
+            menu :
+            <ul>
+              <li><a href="index.html#infosg">informations générales</a></li>
+              <li><a href="index.html#languages">languages</a></li>
+              <li><a href="index.html#projets">projets en cours</a></li>
+              <li><a href="index.html#contacts">Contacts</a></li>
+            </ul>
+            <img class="cec" src="cec.png" title="course en cours"><br/>
+            <select name="infos">
+              <option>informations éclairs</option>
+              <option>Mieze Eliott 14ans 2nde</option>
+              <option>mail: eliottmieze@gmail.com</option>
+              <option>tel: 0606060606</option>
+              <option>discord: Nocteln#6235</option>
+            </select>
+          </div>
+          <div class="paragraphe2">
+          <div class="paragraphe" id="infosg"> 
+              <p><strong>Nom :</strong> Mieze <br/>
+                <strong>Prénom :</strong> Eliott<br/>
+                <strong>âge :</strong> 14ans <br/>
+                <strong>classe :</strong> 2nde<br/>
+                <strong>passion :</strong> l'informatique
+            </p>
+            </div>
+
+          <div class="paragraphe" id="languages">
+               <p>Languages connus : </p>
+               <ul>
+              <li>Javascript</li>
+              <li><a href="htmlcss.html" title="page sur le HTML/CSS">HTML/CSS</a></li>
+              <li>lua</li>
+              <li>autres</li>
+          </ul></div>
+
+          <div class="paragraphe" id="projets">
+            Projet en cour : <a href="https://course-en-cours.com" title="course en cours" target="_blank">course-en-cours</a>      
+            <a href="https://openclassrooms.com/fr/courses/6175841-apprenez-a-programmer-avec-javascript" target="_blank">Apprentissage du Javascript </a>  
+
+          </div>
+
+          <div class="paragraphe" id="contacts">
+            Contacts0
+            <p>mail : <a href="mailto:eliottmieze@gmail.com">eliottmieze@gmail.com</a></p>
+            <p>tel : <a href="tel:+33767257295">07 67 25 72 95</a></p>
+            <p>discord : Nocteln#6235</p>
+
+          </div>
+          <a href="index.html#haut"><img class="haut" src="haut.png" title="retour en haut de la page"></a>
+          </div>
+          
+
+
+
+
+          <form method="post" action="traitement.php">
+            <p>Texte à l'interieur du formulaire</p>
+            <label for="mail">Votre Email</label> : <br/><input type="email" name="mail" id="mail" placeholder="Ex : eliottmieze@gmail.com" size="25px" maxlength="50"/><br/>
+
+            <label for="msg">Votre message</label> :<br/> <textarea name="msg" id="msg" rows="10" cols="40">Mon cv est génial je sais pas besoin de me l'envoyer :)</textarea><br/>
+
+            <label for="note">La note du site /20</label> : <br/> <input type="number" min="20" max="20" placeholder="20"/>
+          </form>
+      </body>
+</html>
