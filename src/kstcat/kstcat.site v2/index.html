@@ -1,0 +1,432 @@
+<!doctype html>
+<?php
+$host = 'localhost:3306';
+$user = 'kstcatsi_BG';
+$pass = 'Lebg!!';
+$database = 'kstcatsi_kstcat';
+try {
+    $db = new PDO("mysql:host=$host;dbname=$database;charset=utf8", $user, $pass);
+} catch (PDOException $e) {
+    echo 'Un problème est survenu';
+}
+if(!empty($_POST["email"])){
+$mail = htmlspecialchars($_POST["email"]);
+$sujet = htmlspecialchars($_POST["options"]);
+$mess = htmlspecialchars($_POST["message"]);
+$insert = $db->prepare("INSERT INTO formulaires(email, sujet, message) VALUES('$mail', '$sujet', '$mess')");
+$insert->execute();
+}
+?>
+<html lang="fr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Raleway:ital,wght@1,100&display=swap" rel="stylesheet">
+
+
+    <!--icones-->
+    <script src="https://kit.fontawesome.com/3ac909e731.js" crossorigin="anonymous"></script>
+
+    <title>KST-CAT</title>
+
+  </head>
+  <body id="haut">
+
+    <!--*********************************navbar******************************-->
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#haut"><i class="fa-solid fa-star"></i>KST-CAT<i class="fa-solid fa-star"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link active" href="#haut">Acceuil <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#grp">L'équipe</a>
+            <a class="nav-item nav-link" href="#logo">Le logo</a>
+            <a class="nav-item nav-link" href="#coc">Course-en-cours</a>
+            <a class="nav-item nav-link" href="#video">vidéo</a>
+            <a class="nav-item nav-link" href="#don">Donations</a>
+            <a class="nav-item nav-link" href="#contact">Nous contacter</a>
+          </div>
+        </div>
+    </nav>
+
+    
+
+
+    <!--************header************-->
+
+
+
+
+      <header class="container-fluid">
+        
+        <div class="row align-items-center">
+
+          <div class="col-12 col-md-6 titreHaut d-flex align-items-center">
+
+            <div>
+              <h1><i class="fa-solid fa-star"></i>KST-CAT<i class="fa-solid fa-star"></i></h1>
+            </div>
+
+          </div>
+
+          <div class="col-12 col-md-6 slogan">
+
+            <h2>Rendez vous dans les étoiles</h2>
+
+          </div>
+        </div>
+
+      </header>
+      
+
+
+
+
+      <!--************************Equipe*****************-->
+
+      <div class="container" id="grp">
+        <div class="row">
+          
+          <div class="col-12 mb-4">
+            <h2>Notre équipe</h2>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="media my-3">
+              <span><i class="fas fa-address-card"></i></span>
+              <div class="media-body ml-3">
+                <h5 class="mt-0">Amaury Geffay</h5>
+                <p class="text-justify">
+                  -chef de l’équipe KST Cat <br/>-responsable du design de l’équipe 
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-md-6">
+            <div class="media my-3">
+              <span><i class="fas fa-address-card"></i></span>
+              <div class="media-body ml-3">
+                <h5 class="mt-0">Ullysse Dallais</h5>
+                <p class="text-justify">
+                  -responsable des essais du véhicule de l’équipe 
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <div class="media my-3">
+              <span><i class="fas fa-address-card"></i></span>
+              <div class="media-body ml-3">
+                <h5 class="mt-0">Lyes Yahiaoui</h5>
+                <p class="text-justify">
+                  -responsable de la fabrication du véhicule <br/>-travail en collaboration avec le responsable de la conception 
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-md-6">
+            <div class="media my-3">
+              <span><i class="fas fa-address-card"></i></span>
+              <div class="media-body ml-3">
+                <h5 class="mt-0">Delya El Goul</h5>
+                <p class="text-justify">
+                  -responsable de la conception du véhicule <br/>-travail en collaboration avec le responsable de la fabrication 
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-md-6">
+            <div class="media my-3">
+              <span><i class="fas fa-address-card"></i></span>
+              <div class="media-body ml-3">
+                <h5 class="mt-0">Eliott Mieze</h5>
+                <p class="text-justify">
+                  -responsable marketting<br/>-responsable de la communication 
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+          <!--****************Logo***************-->
+
+          <div class="container-fluid" id="logo">
+            <div class="row">
+              <div class="col-12 col-md-10 storylogopng">
+
+              </div>
+
+              <div class="col-12 col-md-2 storylogo text-center d-flex justify-content-center flex-column">
+                <span><i class="fas fa-chevron-circle-down"></i></span>
+                <h5 class="my-4">notre logo</h5>
+                <p>Voici notre logo étapes par étapes</p>
+              </div>
+            </div>
+          </div>
+
+
+      
+          <!--***************Course en cours***************-->
+          <br/>
+
+          <div class="container" id="coc">
+            <div class="row">               
+              <div class="col-12 mb-4 ">
+                <h2><a href="https://Course-en-cours.com" target="_blank">Course en cours</a></h2>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="media my-3">
+                  <span><i class="fas fa-location-dot"></i></span>
+                  <div class="media-body ml-3">
+                    <h5 class="mt-0">Une compétition nationale</h5>
+                    <p class="text-justify">
+                      Cette compétiton se déroule à travers la france entière! affin d'atteindre ce niveau national, 3 séléctions auront lieux: une première dans l'école, une deuxieme régionale et la dernière nationale
+                    </p>
+                  </div>
+                </div>
+              </div>
+    
+    
+              <div class="col-12 col-md-6">
+                <div class="media my-3">
+                  <span><i class="fas fa-handshake"></i></span>
+                  <div class="media-body ml-3">
+                    <h5 class="mt-0">de nombreux partenaires</h5>
+                    <p class="text-justify">
+                      Course en cours possède de nombreux partenaires tels que renault, dassault, la RATP...
+                    </p>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-12 col-md-6">
+                <div class="media my-3">
+                  <span><i class="fa-solid fa-car-crash"></i></span>
+                  <div class="media-body ml-3">
+                    <h5 class="mt-0">différents types d'épreuves</h5>
+                    <p class="text-justify">
+                      A travers cette compétition, il y aura 3 types d'épreuves : <br/>   - course de vitesse   <br/>   - anti-patinage   <br/>   - K-O (Knock Out)
+                    </p>
+                  </div>
+                </div>
+              </div>
+    
+    
+              <div class="col-12 col-md-6">
+                <div class="media my-3">
+                  <span><i class="fas fa-address-card"></i></span>
+                  <div class="media-body ml-3">
+                    <h5 class="mt-0">Une formation dans plusieurs domaines</h5>
+                    <p class="text-justify">
+                      Course-en-cours nous permet de nous former dans plusieurs dommaines différents comme par exemple le disign ou le sponsoring...
+                    </p>
+                  </div>
+                </div>
+              </div>
+    
+    
+              <div class="col-12 col-md-6">
+                <div class="media my-3">
+                  <span><i class="fa-solid fa-scroll"></i></span>
+                  <div class="media-body ml-3">
+                    <h5 class="mt-0">Un règlement précis</h5>
+                    <p class="text-justify">
+                      Pour ce projet de Course-en-cours, il y à énormément de règles à respecter affin de gagner des points et de ne pas se faire discalifier
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            <br/><br/>
+    
+          <div class="video-container container-fluid " id="video">
+            <video src="ba_coc.mp4" width=320  height=240 preload="auto" controls poster="./img/poster_ba_coc.PNG">Cette vidéo ne peut pas etre affiché dans votre navigateur </video>
+          </div>
+        </div>
+          <br/><br/><br/>
+
+          
+          <!--************Donations****************
+
+
+
+
+        <section class="donations" id="don">
+
+
+          <div class="row donation">
+            <div class="col-12 col-md-6 " style="margin-bottom: 1rem;">
+             <button class="don btn btn-hov" onclick="window.location.href = 'https://paypal.me/nocteln/1';">Don de 1€</button>
+           </div>
+          <div class="col-12 col-md-6 ">
+             <button class="don btn btn-hov" onclick="window.location.href = 'https://paypal.me/nocteln/5';">Don de 5€</button>
+           </div>
+          </div>
+
+        
+        <div class="row donation">
+          <div class="dolar" id="don">
+            <span><i class="fa-solid fa-circle-dollar-to-slot dolarl"></i> <br/></span>
+          </div>
+        </div>
+
+
+        <div class="row donation">
+          <div class="col-12 col-md-6 " style="margin-bottom: 1rem
+          ;">
+            <button class="don btn btn-hov" onclick="window.location.href = 'https://paypal.me/nocteln/10';">Don de 10€</button>
+          </div>
+          <div class="col-12 col-md-6 ">
+            <button class="don btn btn-hov" onclick="window.location.href = 'https://paypal.me/nocteln/';">Autre montant</button>
+          </div>
+        </div>
+        </section>
+
+
+
+        <section class="donation">
+
+        <div class="row donation">
+          <div class="col-12 col-md-6 dontab">
+            <button class="don btn btn-hov" onclick="window.location.href = 'https://paypal.me/nocteln/1';">Don de 1€</button>
+          </div>
+          <div class="col-12 col-md-6 dontab">
+            <button class="don btn btn-hov" onclick="window.location.href = 'https://paypal.me/nocteln/1';">Don de 1€</button>
+          </div>
+          <div class="donation">
+          <div class="dolar" id="don">
+            <span><i class="fa-solid fa-circle-dollar-to-slot dolarl"></i> <br/></span>
+          </div>
+          </div>
+          <div class="row donation">
+          <div class="col-12 col-md-6 dontab">
+            <button class="don btn btn-hov" onclick="window.location.href = 'https://paypal.me/nocteln/1';">Don de 1€</button>
+          </div>
+          <div class="col-12 col-md-6 dontab">
+            <button class="don btn btn-hov" onclick="window.location.href = 'https://paypal.me/nocteln/1';">Don de 1€</button>
+          </div>
+        </div>
+        </div>
+
+        </section>
+
+      -->
+        
+
+          <br/><br/><br/>
+
+      <!--****************Formulaire***************-->
+
+<div class="container-fluid" id="contact">
+  <div class="row align-items-center">
+    <div class="col-12 offset-md-1 col-md-5 formContact">
+      <form action="" method="post" class="formContact">
+        <div class="form-group email-c">
+          <label for="email" class="form-label">adresse e-mail</label>
+          <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="exemple@hotmail.com" required>
+        </div>
+        <div class="form-group sujet-c">
+          <label for="sujet" class="form-label">Sujet</label>
+          <select class="form-control" id="sujet" name="options">
+            <option value="question">questions</option>
+            <option value="sponsoring">sponsoring</option>
+            <option value="autre">autre</option>
+          </select>
+        </div>
+        <div class="form-group message-c">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" name="message" rows="5" placeholder="votre message" style="resize: none;" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-info btn-c" name="submit">envoyer</button>
+      </form>
+    </div>
+  </div>
+</div>
+        
+
+
+
+
+      <!--****************footer***************-->
+
+      <footer class="container-fluid">
+        <div class="row justify-content-around align-items-center">
+          <div class="col-12 col-md-4 text-center contacts" >
+
+            <p>Contacts :</p>
+            <p>Email : <a href="mailto:contact@kstcat.site">contact@kstcat.site </a><br/>
+              Site : <a href="https://kstcat.site">kstcat.site</a>
+            </p><br/><em>site fait par eliott mieze</em><br>
+            <div class="amdinp">
+            <a href="./index.php" >page admin</a>
+            </div>
+
+          </div>
+          <div class="col-12 col-md-4 text-center icones">
+            <a href="https://www.facebook.com/Kst-cat-102308459050496/" target="_blank" >
+              <i class="fab fa-facebook"></i>
+            </a>
+
+            <a href="https://www.twitter.com" target="_blank" >
+              <i class="fab fa-twitter"></i>
+            </a>
+
+            <a href="https://www.instagram.com" target="_blank" >
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </footer>
+      
+
+
+    <!-- Js -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script>
+      $(function(){
+        $('nav a[href^="#"]').click(function(){
+          var the_id = $(this).attr("href");
+          if (the_id === "#") {
+            return;
+          }
+
+          var posCible = $(the_id).offset().top - 50
+          $('html, body').animate({
+            scrollTop:posCible
+          }, 'slow');
+          return false;
+        });
+      })
+    </script>
+
+
+
+  </body>
+</html>

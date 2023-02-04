@@ -1,0 +1,133 @@
+* {
+    background-color: #111111;
+    color: #c9c9c9;
+
+}
+
+/******* haut *********/
+.frame-haut {
+    display: flex;
+    width: 500px;
+    height: auto;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 20px ;
+    justify-content: center;
+  }
+  
+  .frame-haut-image {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .frame-haut-content {
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #c9c9c9;
+  }
+  
+  .frame-haut img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 100%;
+  }
+.acceuil {
+    display: flex;
+    justify-content: center;
+    color: #c9c9c9;
+    
+}
+.acceuil span {
+    color: #5335E8;
+    font-size: 150%;
+}
+
+
+.info { 
+  display: flex;
+  width: 50%;
+  border: 3px solid #111111;
+  justify-content: center;
+  margin: auto;
+  padding: 15px;
+  border-radius: 25px;
+}
+
+.info ul, .info a, .info span {
+  list-style: none;
+  text-decoration: none;
+  font-size: 110%;
+}
+
+
+/******* projets *********/
+
+.projets {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.cards {
+  display: flex;
+  padding: 10px;
+    
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid rgb(144, 138, 138);
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
+  }
+  
+  
+  .content {
+    display: flex;
+  }
+  
+  .image {
+    width: 150px;
+    height: 150px;
+    padding: 5px;
+    border-radius: 35px;
+  }
+  
+  .text {
+    flex-direction: column;
+    padding: 5px;
+  }
+
+  .text h3 {
+    padding-bottom: 20px;
+  }
+  
+  .button {
+    background-color: #E85D75;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+  }
+  .button:hover {
+    background-color: #582D77;
+  }
+  
+
+
+
+/******* compétences *********/
+
